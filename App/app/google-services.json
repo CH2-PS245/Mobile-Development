@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1033775611958",
+    "project_id": "disdashmaps",
+    "storage_bucket": "disdashmaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033775611958:android:df5727bc76dcf2d30a9897",
+        "android_client_info": {
+          "package_name": "com.example.dishdash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDaobRNrLR5dlwT1OxGgvUAkJ6LhOkLjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

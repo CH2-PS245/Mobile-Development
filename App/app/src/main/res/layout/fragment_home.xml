@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.HomeFragment"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/text_day"
+        android:textColor="@color/navy_strong"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textYouHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textYourHave"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toStartOf="@id/day"
+        app:layout_constraintTop_toBottomOf="@id/day" />
+
+    <TextView
+        android:id="@+id/totalCalori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/text_nol"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toEndOf="@id/textYouHave"
+        app:layout_constraintTop_toBottomOf="@id/day" />
+
+    <TextView
+        android:id="@+id/totalCaloriConsume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nol"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toStartOf="@id/horizontal_percentage"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_percentage" />
+
+    <TextView
+        android:id="@+id/textYouConsume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/text_calori_was_consume"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toEndOf="@id/totalCaloriConsume"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_percentage" />
+
+    <TextView
+        android:id="@+id/text_calori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/text_calori"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toEndOf="@id/totalCalori"
+        app:layout_constraintTop_toBottomOf="@id/day" />
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/horizontal_percentage"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="@id/textYouHave"
+        app:layout_constraintTop_toBottomOf="@id/textYouHave" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/circularLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_percentage">
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/circularComposeCarbo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/circularComposeProtein"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/circularComposeCarbo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/circularComposeFat"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/circularComposeProtein"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_food_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/text_question_eat"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toStartOf="@id/day"
+        app:layout_constraintTop_toBottomOf="@id/circularLayout" />
+
+    <Button
+        android:id="@+id/btn_food_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/navy_light"
+        android:text="@string/text_food_record"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/text_food_record"
+        app:layout_constraintTop_toBottomOf="@id/text_food_record" />
+
+    <TextView
+        android:id="@+id/text_search_location"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/text_offering_location"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toStartOf="@id/day"
+        app:layout_constraintTop_toBottomOf="@id/btn_food_record" />
+
+    <Button
+        android:id="@+id/btn_search_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/navy_light"
+        android:text="@string/text_search_restaurant"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/text_search_location"
+        app:layout_constraintTop_toBottomOf="@id/text_search_location" />
+
+    <TextView
+        android:id="@+id/text_recomendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/text_recomendation"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintStart_toStartOf="@id/btn_search_location"
+        app:layout_constraintTop_toBottomOf="@id/btn_search_location" />
+
+    <TextView
+        android:id="@+id/btn_read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/text_read_more"
+        android:textColor="@color/navy_strong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search_location" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_food"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_recomendation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

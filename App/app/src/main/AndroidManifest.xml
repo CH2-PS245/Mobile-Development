@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dishdash"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.Setting.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.AboutActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCexi3-1MwhAxHT2CXGp3f6X8sbfA3Tsog" />
+
+        <activity
+            android:name=".ui.Setting.EditGoalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.YourGoalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.CatatMakananActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.PlacesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Jetpack.CustomCircularProgressIndicator"
+            android:exported="false"
+            android:label="@string/title_activity_custom_circular_progress_indicator"
+            android:theme="@style/Theme.Dishdash" />
+        <activity
+            android:name=".ui.DetailRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.WeightTargetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Setting.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.MostActiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.WorkTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.HoursSleepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.HeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.DatePickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.NameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeActivity.SplashscreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
